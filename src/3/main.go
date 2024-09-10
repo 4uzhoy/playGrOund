@@ -13,12 +13,12 @@ func findMinMax(numbers []int) (int, int, error) {
 
 	var min, max = numbers[0], numbers[0]
 
-	for i := 0; i < len(numbers); i++ {
-		if numbers[i] > max {
-			max = numbers[i]
+	for _, num := range numbers[1:] {
+		if num > max {
+			max = num
 		}
-		if numbers[i] < min {
-			min = numbers[i]
+		if num < min {
+			min = num
 		}
 	}
 
@@ -30,7 +30,6 @@ func main() {
 	numbers := []int{10, 15, 2, 30, 1, -5, 100, 0}
 	// numbers := []int{}
 	min, max, err := findMinMax(numbers)
-
 	if err != nil {
 		fmt.Println("Error:", err)
 	} else {
