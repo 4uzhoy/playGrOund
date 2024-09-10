@@ -1,3 +1,4 @@
+// Like Hello World, but GO
 package main
 
 import "fmt"
